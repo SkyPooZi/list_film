@@ -31,6 +31,11 @@ class _HomePageState extends State<HomePage> {
     Film toyStory = new Film("Toy Story", "22 November 1995 (Amerika)", "Anak-anak/Petualangan", "1 j 21 m", "8,3/10", 'assets/toystory.jpg');
     Film monstersInc = new Film("Monsters, Inc.", "2 November 2001 (Amerika)", "Komedi/Petualangan", "1 j 32 m", "8,1/10", 'assets/monsterinc.jpg');
     Film Soul = new Film("Soul", "11 Oktober 2020", "Anak-anak/Petualangan", "1 j 40 m", "8/10", 'assets/soul.jpg');
+    Film findingDory = new Film("Finding Dory", "16 Juni 2016 (Indonesia)", "Anak-anak/Petualangan", "1 j 37 m", "7,3/10", 'assets/findingdory.jpg');
+    Film Frozen = new Film("Frozen", "29 November 2013 (Indonesia)", "Anak-anak/Musikal", "1 j 48 m", "7,4/10", 'assets/frozen.jpg');
+    Film Zootopia = new Film("Zootopia", "17 Februari 2016 (Indonesia)", "Anak-anak/Petualangan", "1 j 48 m", "8/10", 'assets/zootopia.jpg');
+    Film Meet_the_Robinsons = new Film("Meet the Robinsons", "30 Maret 2007 (Amerika)", "Anak-anak/Petualangan", "1 j 35 m", "6,8/10", 'assets/meettherobinsons.jpg');
+    Film The_Lion_King = new Film("The Lion King", "17 Juli 2019 (Indonesia)", "Anak-anak/Petualangan", "1 j 58 m", "6,8/10", 'assets/thelionking.jpg');
     FilmFavorite?.add(Up);
     FilmFavorite?.add(bigHero6);
     FilmFavorite?.add(Wall_E);
@@ -46,6 +51,11 @@ class _HomePageState extends State<HomePage> {
     FilmFavorite?.add(toyStory);
     FilmFavorite?.add(monstersInc);
     FilmFavorite?.add(Soul);
+    FilmFavorite?.add(findingDory);
+    FilmFavorite?.add(Frozen);
+    FilmFavorite?.add(Zootopia);
+    FilmFavorite?.add(Meet_the_Robinsons);
+    FilmFavorite?.add(The_Lion_King);
   }
 
   @override

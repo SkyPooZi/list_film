@@ -78,6 +78,11 @@ flutter:
     - assets/toystory.jpg
     - assets/monsterinc.jpg
     - assets/soul.jpg
+    - assets/findingdory.jpg
+    - assets/frozen.jpg
+    - assets/zootopia.jpg
+    - assets/meettherobinsons.jpg
+    - assets/thelionking.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
