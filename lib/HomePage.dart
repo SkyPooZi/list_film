@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Home Page"),),
+      appBar: AppBar(title: Text("My Favorite Film"),),
       body: Center(
         child: Container(
           child: ListView.builder(
@@ -59,17 +59,40 @@ class _HomePageState extends State<HomePage> {
               itemCount: FilmFavorite?.length,
               itemBuilder: (BuildContext context, int index) {
                 return Container(
-                  height: 200,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image(image: AssetImage(FilmFavorite![index].Poster), width: 80, height: 80,),
-                      Text(FilmFavorite![index].nameFilm,),
-                      Text("Tanggal Rilis : " + FilmFavorite![index].Date),
-                      Text("Genre : " + FilmFavorite![index].Genre),
-                      Text("Durasi : " + FilmFavorite![index].Durasi),
-                      Text("Rating : " + FilmFavorite![index].Rating),
-                    ],
+                  padding: EdgeInsets.all(10),
+                  child: Card(
+                    elevation: 4, // Bayangan pada card
+                    child: ListTile(
+                      contentPadding: EdgeInsets.all(10),
+                      leading: Container(
+                        width: 80,
+                        height: 80,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          image: DecorationImage(
+                            image: AssetImage(FilmFavorite![index].Poster),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      title: Text(
+                        FilmFavorite![index].nameFilm,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                      ),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(height: 5),
+                          Text("Tanggal Rilis : " + FilmFavorite![index].Date),
+                          Text("Genre : " + FilmFavorite![index].Genre),
+                          Text("Durasi : " + FilmFavorite![index].Durasi),
+                          Text("Rating : " + FilmFavorite![index].Rating),
+                        ],
+                      ),
+                    ),
                   ),
                 );
               }
