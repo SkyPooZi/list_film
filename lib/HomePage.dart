@@ -63,39 +63,39 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(title: Text("My Favorite Film"),),
       body: Center(
-        child: Container(
-          child: ListView.builder(
-              padding: const EdgeInsets.all(10),
-              itemCount: FilmFavorite?.length,
-              itemBuilder: (BuildContext context, int index) {
-                return Container(
-                  padding: EdgeInsets.all(10),
-                  child: Card(
-                    elevation: 4, // Bayangan pada card
-                    child: ListTile(
-                      contentPadding: EdgeInsets.all(10),
-                      leading: Container(
-                        width: 80,
-                        height: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          image: DecorationImage(
-                            image: AssetImage(FilmFavorite![index].Poster),
-                            fit: BoxFit.cover,
-                          ),
+        child: ListView.builder(
+            padding: const EdgeInsets.all(10),
+            itemCount: FilmFavorite?.length,
+            itemBuilder: (BuildContext context, int index) {
+              return Container(
+                padding: EdgeInsets.all(10),
+                child: Card(
+                  elevation: 4, // Bayangan pada card
+                  child: ListTile(
+                    contentPadding: EdgeInsets.all(10),
+                    leading: Container(
+                      width: 80,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        image: DecorationImage(
+                          image: AssetImage(FilmFavorite![index].Poster),
+                          fit: BoxFit.cover,
                         ),
                       ),
-                      title: Text(
-                        FilmFavorite![index].nameFilm,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                        ),
+                    ),
+                    title: Text(
+                      FilmFavorite![index].nameFilm,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
                       ),
-                      subtitle: Column(
+                    ),
+                    subtitle: Container(
+                      padding: EdgeInsets.only(top: 5),
+                      child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SizedBox(height: 5),
                           Text("Tanggal Rilis : " + FilmFavorite![index].Date),
                           Text("Genre : " + FilmFavorite![index].Genre),
                           Text("Durasi : " + FilmFavorite![index].Durasi),
@@ -104,9 +104,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
-                );
-              }
-          ),
+                ),
+              );
+            }
         ),
       ),
     );
