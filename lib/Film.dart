@@ -3,11 +3,11 @@ class Film {
   late String Date;
   late String Genre;
   late String Durasi;
-  late String Rating;
+  late double Rating;
   late String Poster;
 
 
-  Film(String nameFilm, String Date, String Genre, String Durasi, String Rating, String Poster){
+  Film(String nameFilm, String Date, String Genre, String Durasi, double Rating, String Poster){
     this.nameFilm = nameFilm;
     this.Date = Date;
     this.Genre = Genre;
